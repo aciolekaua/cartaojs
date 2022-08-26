@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cartão</title>
+</head>
+<body>
+    <div class="back">
+        <form>
+            <h3>Preencha os dados</h3>
+
+            <label>Nome Completo</label>
+            <input type="text" id="inName" placeholder="Nome Completo" />
+
+            <label>Data de aniversario</label>
+            <input type="date" id="inBirth" placeholder="" />
+
+            <label>Campus</label>
+            <input type="text" id="inField" placeholder="Nome do campus..." />
+
+            <label>Ano em que terminou</label>
+            <input type="number" id="inYear" placeholder="" />
+
+            <label>Numero de inscrição</label>
+            <input type="number" id="inNum" placeholder="inscrição..." />
+
+            <label for="file" class="upload">Upload da imagem</label>
+            <br />
+            <span>Escolha uma que descreva você perfeitamente!</span>
+
+            <input type="file" id="file" accept="image/*" onchange="loadImage(event)" />
+        </form>
+
+        <button type="submit" id="preview">Visualizar</button>
+
+
+
+        <div class="container">
+            <canvas class="card" id="result">
+
+
+                <header id="head">
+                    <div class="camp">
+                        <h4>Cartão do Campus</h4>
+                        <span>Estudante universitário</span>
+                    </div>
+                    <img src="ivivipng.png" id="logo" alt="" />
+                </header>
+
+                <div class="content">
+                    <img src="" id="imgDisplayed" />
+
+                    <ul>
+                        <li id="name"></li>
+                        <li id="birth"></li>
+                        <li id="fieldYear"></li>
+                        <li>SubN° <span id="num"></span></li>
+                    </ul>
+
+                   
+                </div>
+                
+            </canvas>
+            <button id="down">Download</button>
+        </div>
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
