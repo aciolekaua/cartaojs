@@ -26,6 +26,8 @@ function prev() {
     const ctx = canvas.getContext("2d");
     ctx.font = "20px Helvetica";
 
+
+    ctx.beginPath();
     ctx.fillStyle = "#159"
     ctx.rect(0, 0, 300, 56);
     ctx.fill();
@@ -37,6 +39,7 @@ function prev() {
     const logo = document.getElementById("logo");
     ctx.drawImage(logo, 230, 3, 50, 50);
 
+    ctx.beginPath();
     ctx.fillStyle = "#fff";
     ctx.rect(0, 56, 300, 120);
     ctx.fill();
